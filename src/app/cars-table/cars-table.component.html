@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <tr><th>Make</th><th>Model</th><th>Price</th><th>Quantity</th><th>Unit Total</th><th>
+        Unit Total 2</th></tr>
+    <tbody>
+        <tr  *ngFor="let item of carInfo; index as i;">
+            <td>{{item.make}}</td>
+            <td>{{item.model}}</td>
+            <td>{{item.price | currency  }}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.price * item.quantity | currency  }}</td>
+            <td>{{ getSubTotal(item.price, item.quantity )}}</td>
+        </tr>
+
+        <tr><td colspan="4"></td><td>Sub Total:</td><td>{{calculateSubTotal()| currency}}</td></tr>
+
+        <tr><td colspan="4"></td><td>Tax:</td><td>{{calculateTax() | currency}}</td></tr>
+
+
+        <tr><td colspan="4"></td><td>Total:</td><td>{{calculateSubTotal() + calculateTax() | currency}}</td></tr>
+    </tbody>
+</table>

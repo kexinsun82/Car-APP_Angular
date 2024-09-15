@@ -1,0 +1,32 @@
+<h2>Add New Car</h2>
+<div class="row">
+    <div class="mb-3 col-md-3">
+        <label for="carform1" class="form-label">Make</label>
+        <input [(ngModel)]="carMake" type="text" class="form-control" id="carform1" >
+    </div>
+    <div class="mb-3 col-md-3">
+        <label for="carform2" class="form-label">Model</label>
+        <input [(ngModel)]="carModel" type="text" class="form-control" id="carform2">
+    </div>
+    <div class="mb-3 col-md-3">
+        <label for="carform3" class="form-label">Color</label>
+        <input [(ngModel)]="carColor" type="text" class="form-control" id="carform3">
+    </div>
+    <div class="mb-3 col-md-3">
+        <label for="carform4" class="form-label">Price</label>
+        <input  [(ngModel)]="carPrice" type="text" class="form-control" id="carform4">
+    </div>
+    <div class="mb-3 col-md-3">
+        <label for="carform4" class="form-label">Quantity</label>
+        <input [(ngModel)]="carQuantity" type="text" class="form-control" id="carform4">
+    </div>
+    <div class="mb-3 col-md-3">
+        <label for="carform5" class="form-label">Url</label>
+        <input [(ngModel)]="carURL" type="text" class="form-control" id="carform5">
+    </div>
+    <div class="mb-3 col-md-3">
+        <button class="btn btn-primary" (click)="addCar()">Add New Car</button>
+    </div>
+</div>
+
+

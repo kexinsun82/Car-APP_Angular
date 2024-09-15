@@ -1,0 +1,13 @@
+<div class="row">
+<div class="col-md-4" *ngFor="let item of carInfo; index as i;"> 
+    <div class="card" >
+      <img [src]="item.url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.make}}</h5>
+        <p class="card-text">{{item.model}} in {{item.color}}</p>
+        <p>{{item.price | currency }} </p>
+        <a href="#" class="btn btn-primary" (click)="changeTopImage(i)">Go</a>
+      </div>
+    </div>
+  </div>
+</div>

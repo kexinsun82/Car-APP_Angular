@@ -1,0 +1,20 @@
+
+
+<div class="container-md">
+  <app-header [dealershipName]="title" (changeMainImage)="changeParentImage($event)"></app-header>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+        <img [src]="mainImage" alt="">
+    </div>
+</div>
+
+<app-car-form (addNewCar)="addCarToCarData($event)"></app-car-form>
+
+<app-cars-table [carInfo]="carData.cars"></app-cars-table>
+
+<app-cards (changeImage)="changeTopParentImage($event)" [carInfo]="carData.cars"></app-cards>
+
+</div>
